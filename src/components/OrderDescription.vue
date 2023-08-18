@@ -110,7 +110,7 @@
 
 <script>
 import axios from "@/utils/axios-config";
-import { mapState, mapMutations } from "vuex";
+import { mapState, mapMutations , mapActions } from "vuex";
 
 export default {
   props: {
@@ -140,6 +140,7 @@ export default {
     },
   },
   methods: {
+    ...mapActions(['fetchOrdersHistory']),
     ...mapMutations(["REMOVE_FROM_ORDER", "CLEAR_ORDER_ITEMS"]),
     calculateTotal(item) {
       return (item.price * item.amount).toFixed(2);
@@ -184,7 +185,7 @@ export default {
 
             //llamar al notify para mostrar el mensaje de exito
             //no salio por ningun lado xd
-
+            this.fetchOrdersHistory();
             this.$notify({
               title: "Pedido creado con éxito!",
               text: "Tu pedido ha sido creado con éxito!",
