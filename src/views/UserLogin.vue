@@ -43,7 +43,7 @@
           href="#"
           @click.prevent="goToRegister"
           class="text-blue-500 hover:underline"
-          >¿Ya tienes una cuenta?</a
+          >¿No tienes una cuenta? Regístrate aquí</a
         >
       </p>
     </form>

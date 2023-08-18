@@ -71,6 +71,14 @@
       >
         Registrar
       </button>
+      <p class="text-center mt-2">
+        <a
+          href="#"
+          @click.prevent="goToLogin"
+          class="text-blue-500 hover:underline"
+          >¿Ya tienes una cuenta? Inicia sesión aquí</a
+        >
+      </p>
     </form>
   </div>
 </template>
